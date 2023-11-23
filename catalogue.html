@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tasty choice</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo-main">
+          <img src="./images/logo.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="hr">
+    <!--------- payment-form window --------->
+    <div class="payment-form" id="payment">
+      <div class="payment-form__header">
+        <p class="payment-form__title">Оформление заказа</p>
+        <button class="payment-form__button-close" type="button" id="closePayment">&times;</button>
+      </div>
+      <div class="payment-form__type">
+        <p class="payment-form__type-text">Способ оплаты</p>
+        <div class="radio">
+          <div class="form_radio_btn">
+            <input id="radio-1" type="radio" name="radio" value="1" checked>
+            <label for="radio-1">
+              <img class="radio__image" src="images/payment-form_card_icon.svg" alt="Card">
+              <p class="radio__text">Visa, MasterCard</p>
+            </label>
+          </div>
+
+          <div class="form_radio_btn">
+            <input id="radio-2" type="radio" name="radio" value="2">
+            <label for="radio-2">
+              <img class="radio__image" src="images/payment-form_terminal_icon.svg" alt="Card">
+              <p class="radio__text">Терминал</p>
+            </label>
+          </div>
+
+          <div class="form_radio_btn">
+            <input id="radio-3" type="radio" name="radio" value="3">
+            <label for="radio-3">
+              <img class="radio__image" src="images/payment-form_cash_icon.svg" alt="Card">
+              <p class="radio__text">Наличные</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="payment-form__data">
+        <label for="fname">Имя Фамилия</label>
+        <input type="text" id="fname" name="firstname" placeholder="Имя Фамилия">
+        <label for="tel">Телефон</label>
+        <input type="text" id="phone" name="phone" placeholder="+1 (234) 567 89 01">
+        <label for="adr">Адрес доставки</label>
+        <input type="text" id="adr" name="address" placeholder="улица Название 8а корпус 1">
+        <label for="email">E-Mail адрес</label>
+        <input type="text" id="email" name="email" placeholder="myemail@gmail.com">
+      </div>
+      <div class="payment-form__order-info">
+        <p>Классический джем клубничный в упаковке</p>
+        <div class="payment-form__order-info-items">
+          <p class="order-info-item">Количество: <span>1 шт.</span></p>
+          <p class="order-info-item"> Итого: <b>28₪</b></p>
+        </div>
+        <button class="payment-form__order-info-button">Оплатить</button>
+      </div>
+    </div>
+    <!--------- payment-form end --------->
+    <div class="container">
+      <div class="intagram__title">
+        <div class="intagram__title-decoration"></div>
+        <div class="intagram__title-text">Меню</div>
+        <div class="intagram__title-decoration"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="wrapper">
+      <aside class="menu">
+
+        <div class="menu__title">Выберите категорию</div>
+        <ul class="menu__item">
+          <li><a href="#">Гостеприимные подносы</a></li>
+          <li><a href="#">Гостеприимные подносы</a></li>
+          <li><a href="#">Гостеприимные подносы</a></li>
+          <li><a href="#">Гостеприимные подносы</a></li>
+          <li><a href="#">Гостеприимные подносы</a></li>
+        </ul>
+
+      </aside>
+      <main class="catalogue">
+
+        <section class="catalogue__header">
+          <div class="dropdown">
+            <div class="dropdown-toggle">
+              Выберите категорию <img src="images/arrow.svg" id="arrow">
+            </div>
+            <ul class="dropdown-menu">
+              <li><a href="#">Гостеприимные подносы</a></li>
+              <li><a href="#">Гостеприимные подносы</a></li>
+              <li><a href="#">Гостеприимные подносы</a></li>
+              <li><a href="#">Гостеприимные подносы</a></li>
+              <li><a href="#">Гостеприимные подносы</a></li>
+            </ul>
+          </div>
+          <form class="search" action="">
+            <input type="search" id="search" name="search" placeholder="Поиск по товарам">
+            <input type="submit" value=" " id="searchSubmit">
+          </form>
+
+        </section>
+        <section class="catalogue__items">
+          <div class="catalogue__item">
+            <img src="images/catalogue/1.jpg" alt="">
+            <p class="catalogue__item-description">
+              קרואסון חמאה - קרואסון חמאה קלאסי
+            </p>
+            <div class="price">
+              <span class="item-price">15 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button catalogue__added">Добавлено в корзину</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/2.jpg" alt="">
+            <p class="catalogue__item-description">
+              קרואסון שוקולד - במילוי שוקולד חלב
+            </p>
+            <div class="price">
+              <span class="item-price">18 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/3.jpg" alt="">
+            <p class="catalogue__item-description">
+              קרואסון שוקולד שקדים - קרואסון שוקולד במילוי קרם שקדים
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+
+          <div class="catalogue__item">
+            <img src="images/catalogue/4.jpg" alt="">
+            <p class="catalogue__item-description">
+              קרואסון פקאן - במילוי קרם פקאן
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/5.jpg" alt="">
+            <p class="catalogue__item-description">
+              קרואסון פיסטוק - במילוי קרם פיסטוק
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button catalogue__added">Нет в наличии</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/6.jpg" alt="">
+            <p class="catalogue__item-description">
+              קרואסון שקדים - במילוי קרם שקדים
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/7.jpg" alt="">
+            <p class="catalogue__item-description">
+              קינמון - מאפה עם קינמון וסוכר
+            </p>
+            <div class="price">
+              <span class="item-price">15 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/8.jpg" alt="">
+            <p class="catalogue__item-description">
+              דייניש פירות יער - פירות יער וקרם מסקרפונה
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item">
+            <img src="images/catalogue/9.jpg" alt="">
+            <p class="catalogue__item-description">
+              קראפין פיסטוק אמרנה - קרם פיסטוק איראני ודובדבני אמרנה
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count">4шт.</span>
+            </div>
+            <button class="catalogue__button">Добавить в корзину</button>
+          </div>
+        </section>
+      </main>
+      <aside class="payment">
+        <p class="payment__title">Самовывоз</p>
+        <p class="payment__details">Название отделения</p>
+        <p class="payment__title">Срок оплаты</p>
+        <p class="payment__details">Четверг 09.11 | 10:00-11:00</p>
+        <p class="payment__title">Корзина</p>
+        <ul class="cart">
+          <li>
+            <p>Классический джем клубничный в упаковке</p>
+            <div class="contols">
+              <a href="#"><img src="images/controls_plus_icon.svg" alt=""></a>
+              <a href="#"><img src="images/controls_minus_icon.svg" alt=""></a>
+              <a href="#"><img src="images/controls_edit_icon.svg" alt=""></a>
+            </div>
+          </li>
+          <li>
+            <p>Классический джем клубничный в упаковке</p>
+            <div class="contols">
+              <a href="#"><img src="images/controls_plus_icon.svg" alt=""></a>
+              <a href="#"><img src="images/controls_minus_icon.svg" alt=""></a>
+              <a href="#"><img src="images/controls_edit_icon.svg" alt=""></a>
+            </div>
+          </li>
+          <li>
+            <p>Классический джем клубничный в упаковке</p>
+            <div class="contols">
+              <a href="#"><img src="images/controls_plus_icon.svg" alt=""></a>
+              <a href="#"><img src="images/controls_minus_icon.svg" alt=""></a>
+              <a href="#"><img src="images/controls_edit_icon.svg" alt=""></a>
+            </div>
+          </li>
+
+        </ul>
+        <button id="openPayment" class="payment__button">оплатить</button>
+      </aside>
+    </div>
+  </div>
+
+
+  <section class="info">
+    <div class="info__inner">
+      <div class="info__item">
+        <div class="info__icon">
+          <img src="images/info_contacts_icon.svg" alt="">
+        </div>
+        <div class="info__title">Контакты</div>
+        <div class="info__text">
+          <p>
+            +1 (234) 56 78 901 <br>
+            e-mail@domain.com <br>
+            @instagram
+          </p>
+        </div>
+      </div>
+      <div class="info__item">
+        <div class="info__icon">
+          <img src="images/info_time_icon.svg" alt="">
+        </div>
+        <div class="info__title">Время работы</div>
+        <div class="info__text">
+          <p>
+            Кафе: <br>
+            Пн-вс c 9:00 до 22.00
+          </p>
+          <p>
+            Доставка: <br>
+            c 9:00 до 21:20
+          </p>
+        </div>
+      </div>
+      <div class="info__item">
+        <div class="info__icon">
+          <img src="images/info_adress_icon.svg" alt="">
+        </div>
+        <div class="info__title">Адрес</div>
+        <div class="info__text">
+          <p>
+            Город, улица Название 16, корпус 1
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.2335268478855!2d34.95839307631148!3d32.812576882166844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dbbf30fe22cab%3A0xc6370e919b64f50e!2zVEFTVFkgQ0hPSUNFIC0g157XkdeX16gg157XmNei157Xmded!5e0!3m2!1sru!2s!4v1700409574178!5m2!1sru!2s"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img src="images/footer_logo.svg" alt="Footer logo">
+        </div>
+        <div class="footer__content">
+          <div class="footer__content-item">
+            <div class="footer__content-title">Центр посетителей</div>
+            <ul>
+              <li>Больница</li>
+              <li>Кампус</li>
+              <li>Все</li>
+            </ul>
+          </div>
+          <div class="footer__content-item">
+            <div class="footer__content-title">Праздничные комплексы</div>
+            <ul>
+              <li>Шавуот 2023</li>
+              <li>Пасха 2023</li>
+              <li>Пурим 2023</li>
+            </ul>
+          </div>
+          <div class="footer__content-item">
+            <div class="footer__content-title">О нас</div>
+            <ul>
+              <li>Контакты</li>
+              <li>Политика конфеденциальности</li>
+              <li>Условия использования</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social-buttons">
+          <a href="#"><img src="images/footer_Instagram_icon.svg" alt="Instagram"></a>
+          <a href="#"><img src="images/footer_google_icon.svg" alt="Google"></a>
+          <a href="#"><img src="images/footer_telegram_icon.svg" alt="Telegram"></a>
+          <a href="#"><img src="images/footer_facebook_icon.svg" alt="Facebook"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Подключаем jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

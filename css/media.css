@@ -1,0 +1,153 @@
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+  .instagram__content {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .info__inner {
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .footer__logo {
+    margin-left: 5vw;
+  }
+
+  .footer__social-buttons {
+    margin-right: 5vw;
+  }
+
+  .catalogue__items {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .footer__content {
+    flex-direction: column;
+    justify-content: left;
+    flex-wrap: nowrap;
+  }
+
+  .main__inner {
+    min-height: 660px;
+  }
+
+  .modal {
+    margin: 0 30px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalogue {
+    width: 100%;
+  }
+
+  .payment {
+    width: 95%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .info__item {
+    padding: 0 30px;
+  }
+
+  .info__inner {
+    padding: 30px 0;
+  }
+
+  .modal h2 {
+    font-size: 32px;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .main__inner {
+    min-height: 550px;
+  }
+
+  .main__title {
+    font-size: 48px;
+  }
+
+  .main__subtitle {
+    font-size: 14px;
+  }
+
+  .info__inner {
+    gap: 25px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__content {
+    gap: 30px;
+  }
+
+  .footer__content-title {
+    margin-bottom: 15px;
+    text-underline-offset: 10px;
+  }
+
+  .footer__content-item ul li {
+    margin-top: 5px;
+  }
+
+  .footer__logo {
+    margin: 0;
+    order: 1;
+  }
+
+  .footer__social-buttons {
+    flex-direction: row;
+    margin: 20px 0;
+    order: 2;
+  }
+
+  .catalogue__items {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
+
+  .modal {
+    padding: 20px 30px;
+    transform: translateY(40px);
+  }
+
+  .modal h2 {
+    font-size: 28px;
+  }
+
+  .modal__button {
+    margin-top: 15px;
+  }
+
+  .payment-form {
+    width: 340px;
+    padding: 20px;
+  }
+
+  .form_radio_btn label {
+    padding: 0;
+  }
+}
