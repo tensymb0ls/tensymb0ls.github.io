@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Instagram Photos</title>
+</head>
+
+<body>
+    <div id="photos"></div>
+
+    <script>
+        // Замените ACCESS_TOKEN на ваш сгенерированный токен
+        const accessToken = 'IGQWROMWh3V1Nud0I1M1BfX25BUVJvUjloX2pnSS0xRU5tNTFvWWx3ZAHZAYT29FTFduazAtYWxwQ0JvUE1wV0NrZA1NLRG4tVjViQnRjWURXTGVJeHhvZAEVyelh1MlNMQnhKRWZACYVM3NC1kb1ZAadC12cExEa3l1NzM0cXlOVXg4YzJZAYUEZD';
+        const userId = '6815732145179986'; // Замените на ваш ID пользователя
+
+        // Эндпоинт для получения медиа
+        const endpoint = `https://graph.instagram.com/${userId}/media?fields=id,media_type,media_url&access_token=${accessToken}`;
+
+        // Функция для выполнения запроса к API
+        async function fetchInstagramPhotos() {
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+
+                // Обработка JSON ответа
+                const photosDiv = document.getElementById('photos');
+                data.data.forEach(photo => {
+                    if (photo.media_type === 'IMAGE') {
+                        const img = document.createElement('img');
+                        img.src = photo.media_url;
+                        img.style.width = '300px'; // задайте размер изображения по вашему усмотрению
+                        photosDiv.appendChild(img);
+                    }
+                });
+            } catch (error) {
+                console.error('Ошибка получения данных:', error);
+            }
+        }
+
+        // Вызов функции для получения фотографий
+        fetchInstagramPhotos();
+    </script>
+</body>
+
+</html>
