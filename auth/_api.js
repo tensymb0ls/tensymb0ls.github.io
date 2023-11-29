@@ -10,7 +10,10 @@ async function fetchInstagramPhotos() {
         const response = await fetch(instagramEndpoint);
         const data = await response.json();
 
+        // Находим контейнер для фото
         const photoDivs = document.querySelectorAll('.instagram__card-img');
+
+        // Отображаем каждое изображение
         data.data.filter(photo => photo.media_type === 'IMAGE').forEach((photo, index) => {
             if (photoDivs[index]) {
                 const img = document.createElement('img');
