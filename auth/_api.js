@@ -1,10 +1,13 @@
-const accessToken = 'TOKEN_HERE';
-const userId = '6815732145179986';
-
 async function fetchInstagramPhotos() {
     try {
-        const endpoint = `https://graph.instagram.com/${userId}/media?fields=id,media_type,media_url&access_token=${accessToken}&limit=5`;
-        const response = await fetch(endpoint);
+        // Получаем userId и accessToken из API
+        const credentialsResponse = await fetch('https://tasty-api.netlify.app/.netlify/functions/instagram/data');
+        const credentialsData = await credentialsResponse.json();
+        const { userId, accessToken } = credentialsData;
+
+        // Запрос изображений из Instagram с использованием полученных userId и accessToken
+        const instagramEndpoint = `https://graph.instagram.com/${userId}/media?fields=id,media_type,media_url&access_token=${accessToken}&limit=5`;
+        const response = await fetch(instagramEndpoint);
         const data = await response.json();
 
         const photoDivs = document.querySelectorAll('.instagram__card-img');
