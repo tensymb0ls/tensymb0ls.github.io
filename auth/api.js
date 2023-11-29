@@ -1,5 +1,5 @@
-const accessToken = 'YOUR_ACCESS_TOKEN';
-const userId = 'YOUR_USER_ID';
+const accessToken = 'IGQWRNdmVlX3gyWEJlUHJRUjdyZA2ZA0UmRmWmV1d1RyVUJhb3RUcUJURjA4elNmUk1VWnpwQUZAjY1R1SUdKY2tZAOFY0NjlveFpONFN5YUhWb2hucW9RQ1FuejlJWHZAPOGtlRkxSMzZA6UDY0TjJSeDJ5R1ZAISlFiVUUZD';
+const userId = '6815732145179986';
 
 async function fetchInstagramPhotos() {
     try {
