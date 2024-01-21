@@ -1,3 +1,15 @@
+// loader
+window.onload = function () {
+    setTimeout(function () {
+        let galleryElements = document.getElementsByClassName('body');
+        let loader = document.getElementsByClassName('loader');
+        for (let i = 0; i < galleryElements.length; i++) {
+            galleryElements[i].style.opacity = '1';
+            loader[i].style.opacity = '0';
+        }
+    }, 200);
+};
+
 $(document).ready(function () {
     const openButton = $(".open");
     const closeButton = $("#close");
