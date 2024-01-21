@@ -16,74 +16,30 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header catalogue-header">
     <div class="container">
+      <div class="language__switcher">
+        <span id="rus">
+          <!-- <img src="./images/rus.svg" alt="rus"> -->
+          <div class="russin__btn">Русский</div>
+        </span>
+        <span id="he">
+          <!-- <img src="./images/he.svg" alt="he"> -->
+          <div class="hebrew__btn">עברית</div>
+        </span>
+      </div>
       <div class="header__inner">
         <a href="index.html" class="logo-main">
-          <img src="./images/logo.svg" alt="">
+          <img src="./images/logo.svg" class="logo" alt="Site logo">
         </a>
       </div>
     </div>
   </header>
   <section class="hr">
-    <!--------- payment-form window --------->
-    <div class="payment-form" id="payment">
-      <div class="payment-form__header">
-        <p class="payment-form__title">Оформление заказа</p>
-        <button class="payment-form__button-close" type="button" id="closePayment">&times;</button>
-      </div>
-      <div class="payment-form__type">
-        <p class="payment-form__type-text">Способ оплаты</p>
-        <div class="radio">
-          <div class="form_radio_btn">
-            <input id="radio-1" type="radio" name="radio" value="1" checked>
-            <label for="radio-1">
-              <img class="radio__image" src="images/payment-form_card_icon.svg" alt="Card">
-              <p class="radio__text">Visa, MasterCard</p>
-            </label>
-          </div>
-
-          <div class="form_radio_btn">
-            <input id="radio-2" type="radio" name="radio" value="2">
-            <label for="radio-2">
-              <img class="radio__image" src="images/payment-form_terminal_icon.svg" alt="Card">
-              <p class="radio__text">Терминал</p>
-            </label>
-          </div>
-
-          <div class="form_radio_btn">
-            <input id="radio-3" type="radio" name="radio" value="3">
-            <label for="radio-3">
-              <img class="radio__image" src="images/payment-form_cash_icon.svg" alt="Card">
-              <p class="radio__text">Наличные</p>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="payment-form__data">
-        <label for="fname">Имя Фамилия</label>
-        <input type="text" id="fname" name="firstname" placeholder="Имя Фамилия">
-        <label for="tel">Телефон</label>
-        <input type="text" id="phone" name="phone" placeholder="+1 (234) 567 89 01">
-        <label for="adr">Адрес доставки</label>
-        <input type="text" id="adr" name="address" placeholder="улица Название 8а корпус 1">
-        <label for="email">E-Mail адрес</label>
-        <input type="text" id="email" name="email" placeholder="myemail@gmail.com">
-      </div>
-      <div class="payment-form__order-info">
-        <p>Классический джем клубничный в упаковке</p>
-        <div class="payment-form__order-info-items">
-          <p class="order-info-item">Количество: <span>1 шт.</span></p>
-          <p class="order-info-item"> Итого: <b>28₪</b></p>
-        </div>
-        <button class="payment-form__order-info-button">Оплатить</button>
-      </div>
-    </div>
-    <!--------- payment-form end --------->
     <div class="container">
       <div class="intagram__title">
         <div class="intagram__title-decoration"></div>
-        <div class="intagram__title-text">Меню</div>
+        <div class="intagram__title-text catalogue-title" data-translate="catalogue-title">Меню</div>
         <div class="intagram__title-decoration"></div>
       </div>
 
@@ -94,178 +50,840 @@
     <div class="wrapper">
       <aside class="menu">
 
-        <div class="menu__title">Выберите категорию</div>
+        <div class="menu__title" data-translate="menu__title" dir="rtl">
+          Выберите категорию</div>
         <ul class="menu__item">
-          <li><a href="#">Гостеприимные подносы</a></li>
-          <li><a href="#">Гостеприимные подносы</a></li>
-          <li><a href="#">Гостеприимные подносы</a></li>
-          <li><a href="#">Гостеприимные подносы</a></li>
-          <li><a href="#">Гостеприимные подносы</a></li>
+          <li><a href="#" data-translate="cat-1" dir="rtl" class="link-list">מאפים מתוקים</a></li>
+          <li><a href="#" data-translate="cat-2" dir="rtl" class="link-list">מאפים מלוחים</a></li>
+          <li><a href="#" data-translate="cat-3" dir="rtl" class="link-list">מהויטרינה</a></li>
+          <li><a href="#" data-translate="cat-4" dir="rtl" class="link-list">בטאבון</a></li>
+          <li><a href="#" data-translate="cat-5" dir="rtl" class="link-list">כריכים</a></li>
+          <li><a href="#" data-translate="cat-6" dir="rtl" class="link-list">עוגות פס</a></li>
+          <li><a href="#" data-translate="cat-7" dir="rtl" class="link-list">עוגיות</a></li>
+          <li><a href="#" data-translate="cat-8" dir="rtl" class="link-list">לחם</a></li>
+          <li><a href="#" data-translate="cat-9" dir="rtl" class="link-list">לחמניות</a></li>
+          <li><a href="#" data-translate="cat-10" dir="rtl" class="link-list">קישים</a></li>
+          <li><a href="#" data-translate="reset" dir="rtl" class="link-list">Reset</a></li>
         </ul>
+
 
       </aside>
       <main class="catalogue">
 
         <section class="catalogue__header">
           <div class="dropdown">
-            <div class="dropdown-toggle">
+            <div class="dropdown-toggle" data-translate="menu__title">
               Выберите категорию <img src="images/arrow.svg" id="arrow">
             </div>
             <ul class="dropdown-menu">
-              <li><a href="#">Гостеприимные подносы</a></li>
-              <li><a href="#">Гостеприимные подносы</a></li>
-              <li><a href="#">Гостеприимные подносы</a></li>
-              <li><a href="#">Гостеприимные подносы</a></li>
-              <li><a href="#">Гостеприимные подносы</a></li>
+              <li><a href="#" data-translate="cat-1" dir="rtl" class="link-list">מאפים מתוקים</a></li>
+              <li><a href="#" data-translate="cat-2" dir="rtl" class="link-list">מאפים מלוחים</a></li>
+              <li><a href="#" data-translate="cat-3" dir="rtl" class="link-list">מהויטרינה</a></li>
+              <li><a href="#" data-translate="cat-4" dir="rtl" class="link-list">בטאבון</a></li>
+              <li><a href="#" data-translate="cat-5" dir="rtl" class="link-list">כריכים</a></li>
+              <li><a href="#" data-translate="cat-6" dir="rtl" class="link-list">עוגות פס</a></li>
+              <li><a href="#" data-translate="cat-7" dir="rtl" class="link-list">עוגיות</a></li>
+              <li><a href="#" data-translate="cat-8" dir="rtl" class="link-list">לחם</a></li>
+              <li><a href="#" data-translate="cat-9" dir="rtl" class="link-list">לחמניות</a></li>
+              <li><a href="#" data-translate="cat-10" dir="rtl" class="link-list">קישים</a></li>
+              <li><a href="#" data-translate="reset" dir="rtl" class="link-list">Reset</a></li>
             </ul>
           </div>
-          <form class="search" action="">
-            <input type="search" id="search" name="search" placeholder="Поиск по товарам">
+          <!-- <form class="search" action="">
+            <input type="search" id="search" class="search-input" name="search" placeholder="Поиск">
             <input type="submit" value=" " id="searchSubmit">
           </form>
-
+          <div class="filter">
+            <div class="filter-toggle">
+              Сортировка <img src="images/arrow.svg" id="arrow">
+            </div>
+            <ul class="filter-menu">
+              <li><a href="#">Лучшее совпадение</a></li>
+              <li><a href="#">Самый популярный</a></li>
+              <li><a href="#">Цена: по возрастанию</a></li>
+              <li><a href="#">Цена: по убыванию</a></li>
+              <li><a href="#">Название</a></li>
+            </ul>
+          </div> -->
         </section>
         <section class="catalogue__items">
-          <div class="catalogue__item">
-            <img src="images/catalogue/1.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_1">
               קרואסון חמאה - קרואסון חמאה קלאסי
             </p>
             <div class="price">
               <span class="item-price">15 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button catalogue__added">Добавлено в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/2.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-57-39.jpg" alt="">
+            <!-- <img src="images/catalogue/1.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_2">
               קרואסון שוקולד - במילוי שוקולד חלב
             </p>
             <div class="price">
               <span class="item-price">18 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/3.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-57-44.jpg" alt="">
+            <!-- <img src="images/catalogue/2.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_3">
               קרואסון שוקולד שקדים - קרואסון שוקולד במילוי קרם שקדים
             </p>
             <div class="price">
               <span class="item-price">22 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
 
-          <div class="catalogue__item">
-            <img src="images/catalogue/4.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_4">
               קרואסון פקאן - במילוי קרם פקאן
             </p>
             <div class="price">
               <span class="item-price">22 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/5.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-57-48.jpg" alt="">
+            <!-- <img src="images/catalogue/3.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_5">
               קרואסון פיסטוק - במילוי קרם פיסטוק
             </p>
             <div class="price">
               <span class="item-price">22 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button catalogue__added">Нет в наличии</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Нет в наличии</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/6.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-57-51.jpg" alt="">
+            <!-- <img src="images/catalogue/4.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_6">
               קרואסון שקדים - במילוי קרם שקדים
             </p>
             <div class="price">
               <span class="item-price">22 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/7.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_7">
               קינמון - מאפה עם קינמון וסוכר
             </p>
             <div class="price">
-              <span class="item-price">15 שח</span>
-              <span class="count">4шт.</span>
+              <span class="item-price">11 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/8.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-57-54.jpg" alt="">
+            <!-- <img src="images/catalogue/5.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_8">
               דייניש פירות יער - פירות יער וקרם מסקרפונה
             </p>
             <div class="price">
               <span class="item-price">25 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
-          <div class="catalogue__item">
-            <img src="images/catalogue/9.jpg" alt="">
-            <p class="catalogue__item-description">
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_9">
               קראפין פיסטוק אמרנה - קרם פיסטוק איראני ודובדבני אמרנה
             </p>
             <div class="price">
               <span class="item-price">25 שח</span>
-              <span class="count">4шт.</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
             </div>
-            <button class="catalogue__button">Добавить в корзину</button>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-58-01.jpg" alt="">
+            <!-- <img src="images/catalogue/6.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_10">
+              קראפין פטל - קרם מסקרפונה ופטל
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_11">
+              פאן סוויס - קרם פטיסייר ושוקולד מריר
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_12">
+              גביניות - קרם ריקוטה וניל
+            </p>
+            <div class="price">
+              <span class="item-price">20 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/photo_2024-01-03_15-58-04.jpg" alt="">
+            <!-- <img src="images/catalogue/7.jpg" alt=""> -->
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_13">
+              דייניש קרמבל תפוחים - תפוחים מקורמלים ושטרוייזל
+            </p>
+            <div class="price">
+              <span class="item-price">20 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/8.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_14">
+              קרואסון ג'אנדויה - שוקולד בטעם אגוזי לוז
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-1">
+            <img src="images/catalogue/9.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_15">
+              קרואסון בטעם פיסטוק ושוקולד לבן - בטעם פיסטוק ושוקולד לבן
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/21.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_16">
+              בורקס גבינה - תערובת גבינות ושומשום
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/22.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_17">
+              בורקס פטה וזיתים - פטה צאן, קלמטה, אורגנו, גרעיני דלעת, קצח ושומשום
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_18">
+              בורקס תפוח אדמה - פירה של רובושון, בצל חרוך וקצח
+            </p>
+            <div class="price">
+              <span class="item-price">20 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_19">
+              בורקס תרד מנגול - תרד, מנגול, זעתר ופטה צאן
+            </p>
+            <div class="price">
+              <span class="item-price">22 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_20">
+              מאפה פורטובלו - בשמל כמהין, ראגו פטריות, מנצ'נגו ופירורי לחם
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_21">
+              מאפה גבינת ברי - גבינת ברי וענבים מעושנים
+            </p>
+            <div class="price">
+              <span class="item-price">26 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/23.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_22">
+              מאפה ארטישוק - ארטישוק, עגבניות צלויות, בצל צלוי, קונפי שום ופרמז'ן
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_23">
+              כרישה עם בצלים - בצלים וגבינת פרובולונה
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-2">
+            <img src="images/catalogue/24.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_24">
+              מלכין - חצילים בחמאה חומה, מרווה, דבש ולאבנה
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/25.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_25">
+              עוגת גבינה - פרוסת עוגת גבינה של נעמה
+            </p>
+            <div class="price">
+              <span class="item-price">36 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_26">
+              טארטלט לימון - קרם לימון ומרנג
+            </p>
+            <div class="price">
+              <span class="item-price">26 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_27">
+              טארטלט ג'אנדויה - קרם שוקולד ג'אנדויה, קרם אגוזי לוז וקרמל מלוח
+            </p>
+            <div class="price">
+              <span class="item-price">28 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_28">
+              מילפיי - בצק עלים מקורמל ומוסלין וניל
+            </p>
+            <div class="price">
+              <span class="item-price">28 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_29">
+              פריז ברסט פיסטוק - פחזנית במילוי מוסלין פיסטוק וקרמל
+            </p>
+            <div class="price">
+              <span class="item-price">36 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/26.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_30">
+              אסטרהאזי - מרנג שקדים וביניהם קרם אגוזים
+            </p>
+            <div class="price">
+              <span class="item-price">28 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-3">
+            <img src="images/catalogue/27.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_31">
+              אופרה - עוגת שכבות בטעמי קפה ושוקולד
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-4">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_32">
+              פיתה חצילים - חצילים, פטה ועלי תבלין
+            </p>
+            <div class="price">
+              <span class="item-price">32 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-4">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_33">
+              פיתה זעתר - זעתר ומוצרלה
+            </p>
+            <div class="price">
+              <span class="item-price">32 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-4">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_34">
+              פוקאצ'ה - עגבניות לחות, שום קונפי ורוקט
+            </p>
+            <div class="price">
+              <span class="item-price">24 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-5">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_35">
+              כריך סלמון - סלמון כבוש בעבודת יד, גבינת שמנת, עגבניות, מלפפון, חמוצים וחסה בתוספת סלט אישי
+            </p>
+            <div class="price">
+              <span class="item-price">58 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-5">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_36">
+              כריך ברי - ברי צלויה, ויניגרט, אגס ביין, מלפפון וחסה בתוספת סלט אישי
+            </p>
+            <div class="price">
+              <span class="item-price">52 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-5">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_37">
+              בורקס פינוקים - בורקס גבינה במילוי אריסה, טחינה, חמוצים, עגבניה, ביצה קשה ועלי רוקט
+            </p>
+            <div class="price">
+              <span class="item-price">38 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-5">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_38">
+              סביח תפוח אדמה - בורקס תפוח אדמה במילוי חצילים, ביצה קשה, טחינה, פטרוזיליה וכוסברה
+            </p>
+            <div class="price">
+              <span class="item-price">38 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-5">
+            <img src="images/catalogue/28.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_39">
+              פרצעל סלט ביצים - פרצעל עם סלט ביצים, עירית ורוטב הולנדז
+            </p>
+            <div class="price">
+              <span class="item-price">20 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-5">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_40">
+              פרצעל טונה - פרצעל עם טונה ,ביצה, חסה, עירית וגבולים של סלרי, רוטב הולנדז
+            </p>
+            <div class="price">
+              <span class="item-price">23 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-6">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_41">
+              אופרה - ג'אקונד, קרם קפה, שוקולד מריר ואספרסו
+            </p>
+            <div class="price">
+              <span class="item-price">90 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-6">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_42">
+              מילפיי - בצק עלים מקורמל וקרם מוסלין
+            </p>
+            <div class="price">
+              <span class="item-price">85 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-6">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_43">
+              שוקולד רויאל - ג'אקונד, ספונג' שוקולד, שנטילי וקרם שוקולד
+            </p>
+            <div class="price">
+              <span class="item-price">90 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-6">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_44">
+              עוגת לימון - ספונג' שקדים, קרם לימון, שוקולד לבן, לימונצ'לו וריבת אוכמניות
+            </p>
+            <div class="price">
+              <span class="item-price">75 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-6">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_45">
+              עוגת אסטרהאזי - מרנג שקדים וקרם אגוזים
+            </p>
+            <div class="price">
+              <span class="item-price">85 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-7">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_46">
+              עוגיות חמאה - עוגיות חמאה קלאסיות - 200 גרם
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-7">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_47">
+              בראוניז - בראוניז שוקולד - 200 גרם
+            </p>
+            <div class="price">
+              <span class="item-price">25 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-7">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_48">
+              עוגיות שוקולד צ'יפס - קמח שקדים ושוקולד צ'יפס - 7 עוגיות
+            </p>
+            <div class="price">
+              <span class="item-price">33 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-7">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_49">
+              מקרונים - יחידות של מקרונים בטעמים שונים 7
+            </p>
+            <div class="price">
+              <span class="item-price">45 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-8">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_50">
+              לחם כפרי - לחם מחמצת ללא תוספות
+            </p>
+            <div class="price">
+              <span class="item-price">15 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-8">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_51">
+              לחם דגנים - לחם מחמצת בעל תערובת דגנים עשירה
+            </p>
+            <div class="price">
+              <span class="item-price">18 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-8">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_52">
+              לחם אגוזי מלך וחמוציות - לחם מחמצת בתוספת אגוזי מלך וחמוציות
+            </p>
+            <div class="price">
+              <span class="item-price">18 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-8">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_53">
+              לחם זעתר - לחם מחמצת בתוספת זעתר ושומשום קלוי
+            </p>
+            <div class="price">
+              <span class="item-price">18 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-8">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_54">
+              לחם עם עגבניות מיובשות - לחם מחמצת בתוספת עגבניות מיובשות
+            </p>
+            <div class="price">
+              <span class="item-price">18 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-8">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_55">
+              חלה - חלה קלאסית לשבת
+            </p>
+            <div class="price">
+              <span class="item-price">18 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-9">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_56">
+              המבורגר - יחידות לחמניות המבורגר 3
+            </p>
+            <div class="price">
+              <span class="item-price">10 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-9">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_57">
+              בריוש - יחידות לחמניות בריוש 3
+            </p>
+            <div class="price">
+              <span class="item-price">10 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-9">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_58">
+              פרצעל - יחידות לחמניות פרצעל 3
+            </p>
+            <div class="price">
+              <span class="item-price">10 שח</span>
+              <span class="count"><span>4</span><span data-translate="unit">шт.</span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-10">
+            <img src="images/catalogue/29.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_59">
+              קיש סלמון - סלמון, ברוקולי, בצל ,כרישה, שמנת
+            </p>
+            <div class="price">
+              <span class="item-price">38 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-10">
+            <img src="images/catalogue/30.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_60">
+              קיש תרד - תרד, מנגול, בצל, ביצים, שמנת, פטה
+            </p>
+            <div class="price">
+              <span class="item-price">32 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
+          </div>
+          <div class="catalogue__item" category="cat-10">
+            <img src="images/catalogue/placeholder.jpg" alt="">
+            <p class="catalogue__item-description" dir="rtl" data-translate="item_61">
+              קיש פטריות - פטריות, שמנת, ביצים ובצל
+            </p>
+            <div class="price">
+              <span class="item-price">32 שח</span>
+              <span class="count"><span>4</span> <span data-translate="unit">шт.</span></span></span>
+            </div>
+            <button class="catalogue__button" data-translate="add_to_cart">Добавить в корзину</button>
           </div>
         </section>
       </main>
-      <aside class="payment">
-        <p class="payment__title">Самовывоз</p>
+      <div class="aside">
+        <aside class="payment">
+          <!-- <p class="payment__title">Самовывоз</p>
         <p class="payment__details">Название отделения</p>
         <p class="payment__title">Срок оплаты</p>
-        <p class="payment__details">Четверг 09.11 | 10:00-11:00</p>
-        <p class="payment__title">Корзина</p>
-        <ul class="cart">
-          <li>
-            <p>Классический джем клубничный в упаковке</p>
-            <div class="contols">
-              <a href="#"><img src="images/controls_plus_icon.svg" alt=""></a>
-              <a href="#"><img src="images/controls_minus_icon.svg" alt=""></a>
-              <a href="#"><img src="images/controls_edit_icon.svg" alt=""></a>
-            </div>
-          </li>
-          <li>
-            <p>Классический джем клубничный в упаковке</p>
-            <div class="contols">
-              <a href="#"><img src="images/controls_plus_icon.svg" alt=""></a>
-              <a href="#"><img src="images/controls_minus_icon.svg" alt=""></a>
-              <a href="#"><img src="images/controls_edit_icon.svg" alt=""></a>
-            </div>
-          </li>
-          <li>
-            <p>Классический джем клубничный в упаковке</p>
-            <div class="contols">
-              <a href="#"><img src="images/controls_plus_icon.svg" alt=""></a>
-              <a href="#"><img src="images/controls_minus_icon.svg" alt=""></a>
-              <a href="#"><img src="images/controls_edit_icon.svg" alt=""></a>
-            </div>
-          </li>
-
-        </ul>
-        <button id="openPayment" class="payment__button">оплатить</button>
-      </aside>
+        <p class="payment__details">Четверг 09.11 | 10:00-11:00</p> -->
+          <p class="payment__title" data-translate="cart" dir="rtl">Корзина</p>
+          <ul class="cart">
+          </ul>
+          <span class="total">
+            <p class="payment__title" data-translate="total" dir="rtl">Итого к оплате:</p>
+            <p class="payment__amount" dir="rtl">0 ₪</p>
+          </span>
+          <button id="openPayment" class="payment__button" data-translate="pay">оплатить</button>
+        </aside>
+        <aside class="payment greetings">
+          <p class="payment__title" data-translate="greetings" dir="rtl">Приветствуем вас,наши соседи❤️</p>
+          <span class="payment__details" data-translate="greetingsText1" dir="rtl">
+            Мы рады что вы зашли на наш сайт🥐🥨</span>
+          <span class="payment__details" data-translate="greetingsText2" dir="rtl">Для того что бы сделать заказ,нужно
+            зарегистрироваться на сайте</span>
+          <span class="payment__details" data-translate="greetingsText3" dir="rtl">Заказ нужно выполнить за день до
+            желаемой даты
+            получения, до 16:00 🕓</span>
+          <span class="payment__details" data-translate="greetingsText4" dir="rtl">В случае, если вы забыли заказать
+            вовремя,
+            можно сделать это позвонив нам в пекарню(на сайте не
+            получится
+            создать заказ
+            с сегодняшнего дня на сегодняшний день).</span>
+          <span class="payment__details" data-translate="greetingsText5" dir="rtl">Если вы хотите сделать большой заказ,
+            пожалуйста, позвоните нам в пекарню и предупредите нас о заказе.</span>
+          <span class="payment__details" data-translate="greetingsText6" dir="rtl">Очень важно заполнить всю
+            информацию во время выполнения заказа, обязательно написать номер телефона и время
+            доставки
+            (когда вы хотите получить ваш заказ).</span>
+          </span>
+          </span>
+        </aside>
+      </div>
     </div>
   </div>
+  <!--------- payment-form window --------->
+  <div class="payment-form" id="payment">
+    <div class="payment-form__header">
+      <p class="payment-form__title" data-translate="payment-title">Оформление заказа</p>
+      <button class="payment-form__button-close" type="button" id="closePayment">&times;</button>
+    </div>
+    <div class="payment-form__type">
+      <p class="payment-form__type-text" data-translate="payment-type">Способ оплаты</p>
+      <div class="radio">
+        <!-- <div class="form_radio_btn">
+          <input id="radio-1" type="radio" name="radio" value="1" checked>
+          <label for="radio-1">
+            <img class="radio__image" src="images/payment-form_card_icon.svg" alt="Card">
+            <p class="radio__text">Visa, MasterCard</p>
+          </label>
+        </div> -->
 
+        <div class="form_radio_btn">
+          <input id="radio-2" type="radio" name="radio" value="2">
+          <label for="radio-2">
+            <img class="radio__image" src="images/payment-form_terminal_icon.svg" alt="Card">
+            <p class="radio__text" data-translate="terminal">Терминал</p>
+          </label>
+        </div>
+
+        <div class="form_radio_btn">
+          <input id="radio-3" type="radio" name="radio" value="3">
+          <label for="radio-3">
+            <img class="radio__image" src="images/payment-form_cash_icon.svg" alt="Card">
+            <p class="radio__text" data-translate="cash">Наличные</p>
+          </label>
+        </div>
+      </div>
+    </div>
+    <form class="payment-form__data">
+      <label for="fname" data-translate="firstname">Имя Фамилия</label>
+      <input type="text" id="fname" name="firstname" placeholder=" " required>
+      <label for="phone" data-translate="tel">Телефон</label>
+      <input type="text" id="phone" name="phone" placeholder=" " required>
+      <label for="adr" data-translate="deliv-address">Адрес доставки</label>
+      <input type="text" id="adr" name="address" placeholder=" " required>
+      <label for="email" data-translate="mail">E-Mail адрес</label>
+      <input type="text" id="email" name="email" placeholder=" " required>
+    </form>
+    <div class="payment-form__order-info">
+      <!-- <p>Классический джем клубничный в упаковке</p>
+      <div class="payment-form__order-info-items">
+        <p class="order-info-item">Количество: <span>1 шт.</span></p> -->
+      <p class="order-info-item"> <span data-translate="total">Итого:</span> <b>0 ₪</b></p>
+    </div>
+    <button class="payment-form__order-info-button" data-translate="pay">Оплатить</button>
+  </div>
+  </div>
+  <!--------- payment-form end --------->
 
   <section class="info">
     <div class="info__inner">
@@ -273,12 +891,13 @@
         <div class="info__icon">
           <img src="images/info_contacts_icon.svg" alt="">
         </div>
-        <div class="info__title">Контакты</div>
+        <div class="info__title" data-translate="contacts">Контакты</div>
         <div class="info__text">
           <p>
-            +1 (234) 56 78 901 <br>
-            e-mail@domain.com <br>
-            @instagram
+            +972 51-5015821 <br>
+            +972 47-795499 <br>
+            info.testychoice@gmail.com <br>
+            @tasty_choice_haifa
           </p>
         </div>
       </div>
@@ -286,15 +905,13 @@
         <div class="info__icon">
           <img src="images/info_time_icon.svg" alt="">
         </div>
-        <div class="info__title">Время работы</div>
+        <div class="info__title" data-translate="time">Время работы</div>
         <div class="info__text">
           <p>
-            Кафе: <br>
-            Пн-вс c 9:00 до 22.00
-          </p>
-          <p>
-            Доставка: <br>
-            c 9:00 до 21:20
+            <span data-translate="timeItem1">ВС-СР 07:00-16:00</span> <br>
+            <span data-translate="timeItem2">ЧТ. 07:00-17:00</span><br>
+            <span data-translate="timeItem3">ПТ. 07:00-16:00</span><br>
+            <span data-translate="timeItem4">СБ - закрыто</span><br>
           </p>
         </div>
       </div>
@@ -302,10 +919,10 @@
         <div class="info__icon">
           <img src="images/info_adress_icon.svg" alt="">
         </div>
-        <div class="info__title">Адрес</div>
+        <div class="info__title" data-translate="address">Адрес</div>
         <div class="info__text">
-          <p>
-            Город, улица Название 16, корпус 1
+          <p data-translate="address-text">
+            Хайфа, улица Шунит 12
           </p>
         </div>
       </div>
@@ -325,35 +942,31 @@
         </div>
         <div class="footer__content">
           <div class="footer__content-item">
-            <div class="footer__content-title">Центр посетителей</div>
+            <!-- <div class="footer__content-title"></div> -->
             <ul>
-              <li>Больница</li>
-              <li>Кампус</li>
-              <li>Все</li>
+              <li><a href="feedback.html" data-translate="contacts">Контакты</a></li>
             </ul>
           </div>
           <div class="footer__content-item">
-            <div class="footer__content-title">Праздничные комплексы</div>
+            <!-- <div class="footer__content-title"></div> -->
             <ul>
-              <li>Шавуот 2023</li>
-              <li>Пасха 2023</li>
-              <li>Пурим 2023</li>
+              <li><a href="privacy.html" data-translate="policy">Политика конфеденциальности</a></li>
             </ul>
           </div>
           <div class="footer__content-item">
-            <div class="footer__content-title">О нас</div>
+            <!-- <div class="footer__content-title"></div> -->
             <ul>
-              <li>Контакты</li>
-              <li>Политика конфеденциальности</li>
-              <li>Условия использования</li>
+              <li><a href="terms.html" data-translate="terms">Условия использования</a></li>
             </ul>
           </div>
         </div>
         <div class="footer__social-buttons">
-          <a href="#"><img src="images/footer_Instagram_icon.svg" alt="Instagram"></a>
-          <a href="#"><img src="images/footer_google_icon.svg" alt="Google"></a>
-          <a href="#"><img src="images/footer_telegram_icon.svg" alt="Telegram"></a>
-          <a href="#"><img src="images/footer_facebook_icon.svg" alt="Facebook"></a>
+          <a href="https://www.instagram.com/tasty_choice_haifa/"><img src="images/footer_Instagram_icon.svg"
+              alt="Instagram"></a>
+          <!-- <a href="#"><img src="images/footer_google_icon.svg" alt="Google"></a>
+            <a href="#"><img src="images/footer_telegram_icon.svg" alt="Telegram"></a> -->
+          <a href="https://www.facebook.com/TastyChoiceBakery?mibextid=LQQJ4d"><img
+              src="images/footer_facebook_icon.svg" alt="Facebook"></a>
         </div>
       </div>
     </div>
@@ -361,6 +974,9 @@
   <!-- Подключаем jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/orderEmailJS.js"></script>
+  <script type="text/javascript" src="./js/languageSwitcher.js"></script>
 </body>
 
 </html>

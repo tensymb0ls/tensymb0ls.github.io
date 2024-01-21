@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tasty choice</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="language__switcher">
+        <span id="rus">
+          <!-- <img src="./images/rus.svg" alt="rus"> -->
+          <div class="russin__btn">Русский</div>
+        </span>
+        <span id="he">
+          <!-- <img src="./images/he.svg" alt="he"> -->
+          <div class="hebrew__btn">עברית</div>
+        </span>
+      </div>
+      <div class="header__inner">
+        <a href="index.html" class="logo-main">
+          <img src="./images/logo.svg" class="logo" alt="Site logo">
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="terms">
+    <div class="terms__content">
+      <div class="feedback">
+        <div>
+          <div class="feedback-title">
+            <div class="catalogue-title" data-translate="feedback">Обратная связь</div>
+          </div>
+        </div>
+        <form class="feedback-form__data" id="contact-form">
+          <label for="fname" data-translate="firstname">Имя Фамилия</label>
+          <input type="text" id="fname" name="from_name" placeholder=" " required>
+          <label for="tel" data-translate="tel">Телефон</label>
+          <input type="text" id="phone" name="contact_number" placeholder=" " required>
+          <label for="email" data-translate="mail">E-Mail адрес</label>
+          <input type="text" id="email" name="user_email" placeholder=" " required>
+          <label for="message" data-translate="message">Сообщение</label>
+          <textarea name="message" id="message" placeholder=" " required></textarea>
+          <input type="submit" value="отправить" class="button" data-translate="send">
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img src="images/footer_logo.svg" alt="Footer logo">
+        </div>
+        <div class="footer__content">
+          <div class="footer__content-item">
+            <!-- <div class="footer__content-title"></div> -->
+            <ul>
+              <li><a href="feedback.html" data-translate="contacts">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__content-item">
+            <!-- <div class="footer__content-title"></div> -->
+            <ul>
+              <li><a href="privacy.html" data-translate="policy">Политика конфеденциальности</a></li>
+            </ul>
+          </div>
+          <div class="footer__content-item">
+            <!-- <div class="footer__content-title"></div> -->
+            <ul>
+              <li><a href="terms.html" data-translate="terms">Условия использования</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social-buttons">
+          <a href="https://www.instagram.com/tasty_choice_haifa/"><img src="images/footer_Instagram_icon.svg"
+              alt="Instagram"></a>
+          <!-- <a href="#"><img src="images/footer_google_icon.svg" alt="Google"></a>
+              <a href="#"><img src="images/footer_telegram_icon.svg" alt="Telegram"></a> -->
+          <a href="https://www.facebook.com/TastyChoiceBakery?mibextid=LQQJ4d"><img
+              src="images/footer_facebook_icon.svg" alt="Facebook"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- feedback form -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/feedbackEmailJS.js"></script>
+  <script type="text/javascript" src="./js/languageSwitcher.js"></script>
+</body>
+
+</html>

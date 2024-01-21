@@ -12,172 +12,238 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+
   <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="#" class="logo-main">
-          <img src="./images/logo.svg" alt="">
-        </a>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    <div class="container">
-      <div class="main__inner">
-        <div class="main__description">
-          <h1 class="main__title">
-            Tasty Choice: Просто вкусно, всегда.
-          </h1>
-          <p class="main__subtitle">
-            знаем толк в кулинарии и хлебопечении
-          </p>
+  <section class="bgimage">
+    <header class="header main-header">
+      <div class="container">
+        <div class="language__switcher">
+          <span id="rus">
+            <img src="./images/rus.svg" alt="rus">
+            <div class="russin__btn">Русский</div>
+          </span>
+          <span id="he">
+            <img src="./images/he.svg" alt="he">
+            <div class="hebrew__btn">עברית</div>
+          </span>
         </div>
-        <button type="button" id="open">
-          заказать
-        </button>
-        <!--------- modal window --------->
-        <div class="modal" id="myModal">
-          <h2>Добрый день, как Вы хотите получить свой заказ?</h2>
-          <button class="modal__button-close" type="button" id="close">&times;</button>
-          <button class="modal__button" onclick="location.href='catalogue.html'" type="button">Больница</button>
-          <button class="modal__button" onclick="location.href='catalogue.html'" type="button">Кампус</button>
-          <button class="modal__button" onclick="location.href='catalogue.html'" type="button">Для всех</button>
+        <div class="header__inner">
+          <a href="index.html" class="logo-main">
+            <img src="./images/logo.svg" class="logo" alt="Site logo">
+          </a>
         </div>
-        <!--------- modal end --------->
       </div>
-    </div>
-  </main>
+    </header>
 
-  <section class="image">
-    <img src="images/section_image.jpg" alt="Section image">
+    <main class="main">
+      <!--------- modal window --------->
+      <div class="modal" id="myModal">
+        <h2 data-translate="modal-title">Добрый день, как Вы хотите получить свой заказ?</h2>
+        <button class="modal__button-close" type="button" id="close">&times;</button>
+        <button class="modal__button"
+          onclick="location.href=`https://wolt.com/he/isr/haifa/venue/ehrlich-boulangerie-patisserie`" type="button"
+          data-translate="all">
+          Общее меню</button>
+        <button class="modal__button" onclick="location.href='catalogue.html'" type="button"
+          data-translate="hospital">Больница</button>
+        <button class="modal__button" onclick="location.href='catalogue.html'" type="button"
+          data-translate="campus">Кампус</button>
+      </div>
+      <!--------- modal end --------->
+      <div class="single-slide">
+
+        <div class="main__inner">
+          <div class="main__description">
+            <h1 class="main__title">
+              <span data-translate="simply">Просто.</span><br>
+              <span data-translate="tasty">Вкусно.</span><br>
+              <span data-translate="always">Всегда!</span>
+            </h1>
+          </div>
+          <button type="button" class="open" data-translate="buy">
+            заказать
+          </button>
+        </div>
+        <div class="main__inner slide-2">
+          <div class="main__description">
+            <div class="slide-2__wrapper">
+              <h1 class="main__title">
+                <span data-translate="slide-2" id="slide-2">
+                  Разнообразие сладких и роскошных выпечек
+                </span>
+              </h1>
+              <button type="button" class="open" data-translate="buy">
+                заказать
+              </button>
+            </div>
+            <img src="./images/slide-2_cookie.png" alt="cookie">
+          </div>
+        </div>
+        <div class="main__inner slide-3">
+          <div class="main__description">
+            <div class="slide-3__wrapper">
+              <h1 class="main__title">
+                <span data-translate="slide-3" id="slide-3">
+                  Разнообразие вкусных и свежих бутербродов
+                </span>
+              </h1>
+              <button type="button" class="open" data-translate="buy">
+                заказать
+              </button>
+            </div>
+            <img src="./images/slide_3_buter.png" alt="sandwich">
+          </div>
+        </div>
+      </div>
+      <!-- <div>
+        <video  muted autoplay playsinline class="video__player" id="video__player" onended="run()">
+        <video muted autoplay playsinline class="video__player" id="video__player">
+          <source src="./video/motorcycle.mp4" type="video/mp4">
+        </video>
+      </div> -->
+    </main>
+
+    <section class="instagram">
+      <div class="container">
+        <div class="intagram__title">
+          <div class="intagram__title-decoration"></div>
+          <div class="intagram__title-text" data-translate="insta">Наш инстаграм</div>
+          <div class="intagram__title-decoration"></div>
+        </div>
+        <div class="instagram__content">
+          <div class="instagram__card">
+            <div class="instagram__card-img">
+              <div class="instagram__card-account">
+                <span>
+                  <div class="instagram_card-icon"></div>
+                  <div class="instagram__card-name">tasty_choice_haifa</div>
+                </span>
+                <div class="instagram__card-expand">...</div>
+              </div>
+              <img src="images/card_1.jpg" alt="Instagram image">
+            </div>
+            <div class="instagram__card-buttons">
+              <img src="images/instagram_like_icon.svg" alt="Like">
+              <img src="images/instagram_comment_icon.svg" alt="Comment">
+              <img src="images/instagram_send_icon.svg" alt="Send">
+            </div>
+            <div class="instagram__card-likes">Нравится: 1256</div>
+            <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
+              Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
+          </div>
+          <div class="instagram__card">
+            <div class="instagram__card-img">
+              <div class="instagram__card-account">
+                <span>
+                  <div class="instagram_card-icon"></div>
+                  <div class="instagram__card-name">tasty_choice_haifa</div>
+                </span>
+                <div class="instagram__card-expand">...</div>
+              </div>
+              <img src="images/card_2.jpg" alt="Instagram image">
+            </div>
+            <div class="instagram__card-buttons">
+              <img src="images/instagram_like_icon.svg" alt="Like">
+              <img src="images/instagram_comment_icon.svg" alt="Comment">
+              <img src="images/instagram_send_icon.svg" alt="Send">
+            </div>
+            <div class="instagram__card-likes">Нравится: 2301</div>
+            <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
+              Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
+          </div>
+          <div class="instagram__card">
+            <div class="instagram__card-img">
+              <div class="instagram__card-account">
+                <span>
+                  <div class="instagram_card-icon"></div>
+                  <div class="instagram__card-name">tasty_choice_haifa</div>
+                </span>
+                <div class="instagram__card-expand">...</div>
+              </div>
+              <img src="images/card_3.jpg" alt="Instagram image">
+            </div>
+            <div class="instagram__card-buttons">
+              <img src="images/instagram_like_icon.svg" alt="Like">
+              <img src="images/instagram_comment_icon.svg" alt="Comment">
+              <img src="images/instagram_send_icon.svg" alt="Send">
+            </div>
+            <div class="instagram__card-likes">Нравится: 978</div>
+            <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
+              Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
+          </div>
+          <div class="instagram__card">
+            <div class="instagram__card-img">
+              <div class="instagram__card-account">
+                <span>
+                  <div class="instagram_card-icon"></div>
+                  <div class="instagram__card-name">tasty_choice_haifa</div>
+                </span>
+                <div class="instagram__card-expand">...</div>
+              </div>
+              <img src="images/card_4.jpg" alt="Instagram image">
+            </div>
+            <div class="instagram__card-buttons">
+              <img src="images/instagram_like_icon.svg" alt="Like">
+              <img src="images/instagram_comment_icon.svg" alt="Comment">
+              <img src="images/instagram_send_icon.svg" alt="Send">
+            </div>
+            <div class="instagram__card-likes">Нравится: 3548</div>
+            <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
+              Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
+          </div>
+          <div class="instagram__card">
+            <div class="instagram__card-img">
+              <div class="instagram__card-account">
+                <span>
+                  <div class="instagram_card-icon"></div>
+                  <div class="instagram__card-name">tasty_choice_haifa</div>
+                </span>
+                <div class="instagram__card-expand">...</div>
+              </div>
+              <img src="images/card_5.jpg" alt="Instagram image">
+            </div>
+            <div class="instagram__card-buttons">
+              <img src="images/instagram_like_icon.svg" alt="Like">
+              <img src="images/instagram_comment_icon.svg" alt="Comment">
+              <img src="images/instagram_send_icon.svg" alt="Send">
+            </div>
+            <div class="instagram__card-likes">Нравится: 75</div>
+            <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
+              Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
-  <section class="instagram">
-    <div class="container">
-      <div class="intagram__title">
-        <div class="intagram__title-decoration"></div>
-        <div class="intagram__title-text">Наш инстаграм</div>
-        <div class="intagram__title-decoration"></div>
-      </div>
-      <div class="instagram__content">
-        <div class="instagram__card">
-          <div class="instagram__card-img">
-            <div class="instagram__card-account">
-              <span>
-                <div class="instagram_card-icon"></div>
-                <div class="instagram__card-name">tasty_choice_haifa</div>
-              </span>
-              <div class="instagram__card-expand">...</div>
-            </div>
-            <!-- <img src="images/card_1.jpg" alt="Instagram image"> -->
-          </div>
-          <div class="instagram__card-buttons">
-            <img src="images/instagram_like_icon.svg" alt="Like">
-            <img src="images/instagram_comment_icon.svg" alt="Comment">
-            <img src="images/instagram_send_icon.svg" alt="Send">
-          </div>
-          <div class="instagram__card-likes">Нравится: 1256</div>
-          <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
-            Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
-        </div>
-        <div class="instagram__card">
-          <div class="instagram__card-img">
-            <div class="instagram__card-account">
-              <span>
-                <div class="instagram_card-icon"></div>
-                <div class="instagram__card-name">tasty_choice_haifa</div>
-              </span>
-              <div class="instagram__card-expand">...</div>
-            </div>
-            <!-- <img src="images/card_2.jpg" alt="Instagram image"> -->
-          </div>
-          <div class="instagram__card-buttons">
-            <img src="images/instagram_like_icon.svg" alt="Like">
-            <img src="images/instagram_comment_icon.svg" alt="Comment">
-            <img src="images/instagram_send_icon.svg" alt="Send">
-          </div>
-          <div class="instagram__card-likes">Нравится: 2301</div>
-          <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
-            Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
-        </div>
-        <div class="instagram__card">
-          <div class="instagram__card-img">
-            <div class="instagram__card-account">
-              <span>
-                <div class="instagram_card-icon"></div>
-                <div class="instagram__card-name">tasty_choice_haifa</div>
-              </span>
-              <div class="instagram__card-expand">...</div>
-            </div>
-            <!-- <img src="images/card_3.jpg" alt="Instagram image"> -->
-          </div>
-          <div class="instagram__card-buttons">
-            <img src="images/instagram_like_icon.svg" alt="Like">
-            <img src="images/instagram_comment_icon.svg" alt="Comment">
-            <img src="images/instagram_send_icon.svg" alt="Send">
-          </div>
-          <div class="instagram__card-likes">Нравится: 978</div>
-          <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
-            Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
-        </div>
-        <div class="instagram__card">
-          <div class="instagram__card-img">
-            <div class="instagram__card-account">
-              <span>
-                <div class="instagram_card-icon"></div>
-                <div class="instagram__card-name">tasty_choice_haifa</div>
-              </span>
-              <div class="instagram__card-expand">...</div>
-            </div>
-            <!-- <img src="images/card_4.jpg" alt="Instagram image"> -->
-          </div>
-          <div class="instagram__card-buttons">
-            <img src="images/instagram_like_icon.svg" alt="Like">
-            <img src="images/instagram_comment_icon.svg" alt="Comment">
-            <img src="images/instagram_send_icon.svg" alt="Send">
-          </div>
-          <div class="instagram__card-likes">Нравится: 3548</div>
-          <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
-            Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
-        </div>
-        <div class="instagram__card">
-          <div class="instagram__card-img">
-            <div class="instagram__card-account">
-              <span>
-                <div class="instagram_card-icon"></div>
-                <div class="instagram__card-name">tasty_choice_haifa</div>
-              </span>
-              <div class="instagram__card-expand">...</div>
-            </div>
-            <!-- <img src="images/card_5.jpg" alt="Instagram image"> -->
-          </div>
-          <div class="instagram__card-buttons">
-            <img src="images/instagram_like_icon.svg" alt="Like">
-            <img src="images/instagram_comment_icon.svg" alt="Comment">
-            <img src="images/instagram_send_icon.svg" alt="Send">
-          </div>
-          <div class="instagram__card-likes">Нравится: 75</div>
-          <p class="instagram__card-description">Если вы любите белый шоколад, вам точно понравится наш круассан
-            Хрустящее слоеное тесто, нежная фисташка и сладкий белый шоколад - симфония вкуса в Tastychoise.</p>
-        </div>
-      </div>
+  <section class="image">
+    <div class="video-container">
+      <video muted autoplay loop playsinline>
+        <source src="./video/main_video.mp4" type="video/mp4">
+        <img src="images/section_image.jpg" alt="Section image">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
+
   <section class="info">
     <div class="info__inner">
       <div class="info__item">
         <div class="info__icon">
           <img src="images/info_contacts_icon.svg" alt="">
         </div>
-        <div class="info__title">Контакты</div>
+        <div class="info__title" data-translate="contacts">Контакты</div>
         <div class="info__text">
           <p>
-            +1 (234) 56 78 901 <br>
-            e-mail@domain.com <br>
-            @instagram
+            +972 51-5015821 <br>
+            +972 47-795499 <br>
+            info.testychoice@gmail.com <br>
+            @tasty_choice_haifa
           </p>
         </div>
       </div>
@@ -185,15 +251,13 @@
         <div class="info__icon">
           <img src="images/info_time_icon.svg" alt="">
         </div>
-        <div class="info__title">Время работы</div>
+        <div class="info__title" data-translate="time">Время работы</div>
         <div class="info__text">
           <p>
-            Кафе: <br>
-            Пн-вс c 9:00 до 22.00
-          </p>
-          <p>
-            Доставка: <br>
-            c 9:00 до 21:20
+            <span data-translate="timeItem1">ВС-СР 07:00-16:00</span> <br>
+            <span data-translate="timeItem2">ЧТ. 07:00-17:00</span><br>
+            <span data-translate="timeItem3">ПТ. 07:00-16:00</span><br>
+            <span data-translate="timeItem4">СБ - закрыто</span><br>
           </p>
         </div>
       </div>
@@ -201,10 +265,10 @@
         <div class="info__icon">
           <img src="images/info_adress_icon.svg" alt="">
         </div>
-        <div class="info__title">Адрес</div>
+        <div class="info__title" data-translate="address">Адрес</div>
         <div class="info__text">
-          <p>
-            Город, улица Название 16, корпус 1
+          <p data-translate="address-text">
+            Хайфа, улица Шунит 12
           </p>
         </div>
       </div>
@@ -218,43 +282,40 @@
         </div>
         <div class="footer__content">
           <div class="footer__content-item">
-            <div class="footer__content-title">Центр посетителей</div>
+            <!-- <div class="footer__content-title"></div> -->
             <ul>
-              <li>Больница</li>
-              <li>Кампус</li>
-              <li>Все</li>
+              <li><a href="feedback.html" data-translate="contacts">Контакты</a></li>
             </ul>
           </div>
           <div class="footer__content-item">
-            <div class="footer__content-title">Праздничные комплексы</div>
+            <!-- <div class="footer__content-title"></div> -->
             <ul>
-              <li>Шавуот 2023</li>
-              <li>Пасха 2023</li>
-              <li>Пурим 2023</li>
+              <li><a href="privacy.html" data-translate="policy">Политика конфеденциальности</a></li>
             </ul>
           </div>
           <div class="footer__content-item">
-            <div class="footer__content-title">О нас</div>
+            <!-- <div class="footer__content-title"></div> -->
             <ul>
-              <li>Контакты</li>
-              <li>Политика конфеденциальности</li>
-              <li>Условия использования</li>
+              <li><a href="terms.html" data-translate="terms">Условия использования</a></li>
             </ul>
           </div>
         </div>
         <div class="footer__social-buttons">
-          <a href="#"><img src="images/footer_Instagram_icon.svg" alt="Instagram"></a>
-          <a href="#"><img src="images/footer_google_icon.svg" alt="Google"></a>
-          <a href="#"><img src="images/footer_telegram_icon.svg" alt="Telegram"></a>
-          <a href="#"><img src="images/footer_facebook_icon.svg" alt="Facebook"></a>
+          <a href="https://www.instagram.com/tasty_choice_haifa/"><img src="images/footer_Instagram_icon.svg"
+              alt="Instagram"></a>
+          <!-- <a href="#"><img src="images/footer_google_icon.svg" alt="Google"></a>
+              <a href="#"><img src="images/footer_telegram_icon.svg" alt="Telegram"></a> -->
+          <a href="https://www.facebook.com/TastyChoiceBakery?mibextid=LQQJ4d"><img
+              src="images/footer_facebook_icon.svg" alt="Facebook"></a>
         </div>
       </div>
     </div>
   </footer>
   <!-- Подключаем jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/slick.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="api.js"></script>
+  <script type="text/javascript" src="./js/languageSwitcher.js"></script>
 </body>
 
 </html>

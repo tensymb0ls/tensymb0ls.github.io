@@ -1,4 +1,4 @@
-## Main page basic layout + adaptive + responsive is ready.
+## Edits stage.
 
 Current deploy [here][1].
 
@@ -6,18 +6,23 @@ Current deploy [here][1].
 
 > #### TODO:
 >
+> - Сarousel
+> - Re-layout according to edits
+> - Testing for issues
+> - ~~Terms and Conditions page layout.~~
 > - ~~Payment modal window layout.~~
 > - ~~Adaptive for modal window.~~
 > - ~~Catalogue page:~~
 >   - ~~Layout~~
 >   - ~~Adaptive~~
-> - Sorting togle
+>   - ~~Adding items to cart.~~
+>   - ~~Sorting togle~~
+> - ~~Global layout + adaptive + responsive~~
 >
 > ---
 >
 > - Instagram section:
 >
->   - API registration with Meta for Developers
->   - JS integration to project
+>   - Waiting for UserId and Token from customer
 >
 >   _Everything_ is going according to **plan**.

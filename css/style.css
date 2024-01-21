@@ -1,18 +1,26 @@
 /* Fonts load section */
 @font-face {
-  font-family: "SF UI Display Light";
+  font-family: "Myriad Pro Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("SF UI Display Light"),
-    url("../fonts/sf-ui-display-light-58646b33e0551.woff") format("woff");
+  src: local("Myriad Pro Regular"),
+    url("../fonts/MyriadPro-Light.woff") format("woff");
 }
 
 @font-face {
-  font-family: "SF UI Display Medium";
+  font-family: "Myriad Pro Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("SF UI Display Medium"),
-    url("../fonts/sf-ui-display-medium-58646be638f96.woff") format("woff");
+  src: local("Myriad Pro Regular"),
+    url("../fonts/MyriadPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Semibold"),
+    url("../fonts/MyriadPro-Semibold.woff") format("woff");
 }
 
 /* Variables section */
@@ -20,7 +28,8 @@
   --accent: #eed6ae;
   --accent_light: #f4ddb9;
   --colorDark: #424243;
-  --PaymentFormRadio: #F2ECD9;
+  --colorDeep: #262627;
+  --PaymentFormRadio: #f2ecd9;
   --dropDownMenuText: #877054;
   --colorButtonLight: #edc88e;
   --colorButtonDark: #e6b261;
@@ -28,6 +37,7 @@
   --colorButtonHoverDark: #fac36b;
   --colorButtonInactive: #f2ecd9;
 
+  --size: calc((1vh + 1vw) * 50);
 }
 
 /* GENERAL CSS SETTINGS */
@@ -49,16 +59,25 @@ ul {
   list-style: none;
 }
 
-button {
-  font-family: "SF UI Display Medium", sans-serif;
+.list {
+  list-style: disc;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+button,
+.button {
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 150%;
   letter-spacing: 0.32px;
   text-transform: uppercase;
   color: var(--colorDark);
-  background-image: linear-gradient(var(--colorButtonLight),
-      var(--colorButtonDark));
+  background-image: linear-gradient(
+    var(--colorButtonLight),
+    var(--colorButtonDark)
+  );
   height: 64px;
   min-width: 250px;
   border-radius: 999px;
@@ -69,21 +88,34 @@ button {
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+button:hover,
+.button:hover {
   cursor: pointer;
-  background-image: linear-gradient(var(--colorButtonHoverLight),
-      var(--colorButtonHoverDark));
+  background-image: linear-gradient(
+    var(--colorButtonHoverLight),
+    var(--colorButtonHoverDark)
+  );
 }
 
-button:active {
-  background-image: linear-gradient(var(--colorButtonLight),
-      var(--colorButtonDark));
+button:active,
+.button:active {
+  background-image: linear-gradient(
+    var(--colorButtonLight),
+    var(--colorButtonDark)
+  );
+}
+
+.rtl {
+  text-align: right;
 }
 
 /* MODAL SETTINGS */
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -98,11 +130,12 @@ button:active {
 }
 
 .modal h2 {
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 120%;
   text-align: center;
+  margin: 0 10px;
 }
 
 .modal__button {
@@ -112,11 +145,11 @@ button:active {
 
 .modal__button-close,
 .payment-form__button-close {
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #fff;
+  background-color: #ffffff00;
   font-size: 30px;
   background-image: none;
   box-shadow: none;
@@ -136,23 +169,23 @@ button:active {
 /* PAYMEN FORM SETTINGS */
 .payment-form {
   display: none;
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   color: var(--colorDark);
   width: 440px;
-  min-height: 650px;
+  min-height: 450px;
   /* display: flex; */
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   padding: 30px;
   will-change: opacity;
   left: 50%;
-  top: 23%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .payment-form__header {
@@ -163,6 +196,7 @@ button:active {
 }
 
 .payment-form__title {
+  font-family: "Myriad Pro Semibold", sans-serif;
   font-size: 20px;
   margin-bottom: 3px;
 }
@@ -175,13 +209,13 @@ button:active {
 .payment-form__type {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 15px;
   width: 100%;
 }
 
 .payment-form__type-text,
 .radio__text {
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
 }
 
 .payment-form__type-text {
@@ -197,12 +231,12 @@ button:active {
 }
 
 .form_radio_btn {
-  width: 145px;
+  width: 50%;
   height: 70px;
   font-size: 12px;
 }
 
-.form_radio_btn input[type=radio] {
+.form_radio_btn input[type="radio"] {
   display: none;
 }
 
@@ -234,8 +268,8 @@ button:active {
 }
 
 /* Checked */
-.form_radio_btn input[type=radio]:checked+label {
-  background: var(--PaymentFormRadio)
+.form_radio_btn input[type="radio"]:checked + label {
+  background: var(--PaymentFormRadio);
 }
 
 /* Hover */
@@ -244,7 +278,7 @@ button:active {
 }
 
 /* Disabled */
-.form_radio_btn input[type=radio]:disabled+label {
+.form_radio_btn input[type="radio"]:disabled + label {
   background: #efefef;
   color: #666;
 }
@@ -257,44 +291,44 @@ button:active {
   gap: 10px;
 }
 
-.payment-form__data input[type=text] {
+.payment-form__data input[type="text"] {
   font-size: 16px;
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   color: var(--colorDark);
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 5px;
 }
 
-.payment-form__data input[type=text]:focus {
-  outline: none
+.payment-form__data input[type="text"]:focus {
+  outline: none;
 }
 
-.payment-form__data input[type=text]:focus::placeholder {
+.payment-form__data input[type="text"]:focus::placeholder {
   color: transparent;
 }
 
 .payment-form__data label {
   font-size: 12px;
-  font-family: "SF UI Display Light", sans-serif;
-  margin-top: 15px;
+  font-family: "Myriad Pro Regular", sans-serif;
+  margin-top: 10px;
 }
 
 .payment-form__order-info {
   width: 90%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  gap: 20px;
+  padding: 15px 20px;
+  gap: 15px;
   background-color: var(--PaymentFormRadio);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  margin-top: 25px;
+  margin: 15px 0;
 }
 
 .payment-form__order-info-items {
   font-size: 14px;
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -310,18 +344,74 @@ button:active {
   font-size: 20px;
 }
 
+.bgimage {
+  background-blend-mode: multiply;
+  background-image: url(../images/main_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
 .header {
-  background-color: var(--accent);
+  background-color: var(--accent) transparent;
   min-height: 120px;
   border-bottom: 5px solid rgba(0, 0, 0, 0.1);
 }
 
+.main-header {
+  background-image: url(../images/main_header_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.catalogue-header {
+  background-image: url(../images/cataligue_header_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
+  position: relative;
   max-width: 1810px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.language__switcher {
+  font-family: "Myriad Pro Regular", sans-serif;
+  position: absolute;
+  top: 35px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.language__switcher span {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.language__switcher span:hover {
+  cursor: pointer;
+  color: gray;
+}
+.russin__btn,
+.hebrew__btn {
+  line-height: normal;
+}
+.russin__btn {
+  margin-top: 4px;
+}
 .header__inner {
   position: relative;
   display: flex;
@@ -330,26 +420,23 @@ button:active {
 
 .logo-main {
   position: absolute;
-  margin-top: 35px;
-  z-index: 1;
+  margin-top: 15px;
+  z-index: 3;
 }
 
 .main {
-  background-blend-mode: multiply;
-  background-image: url(../images/main_bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
 }
 
 .main__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
   min-height: 770px;
+  z-index: 1;
 }
 
 .main__description {
@@ -363,26 +450,91 @@ button:active {
 }
 
 .main__title {
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 64px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
 }
 
 .main__subtitle {
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 150%;
+}
+
+.slide-2 {
+  background-image: url(../images/slide-2_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.slide-2 img {
+  height: calc(var(--size) * 0.37);
+  object-fit: cover;
+}
+
+.slide-2__wrapper button {
+  max-width: 100px;
+}
+
+.slide-2__wrapper h1,
+.slide-3__wrapper h1 {
+  font-size: 70px;
+}
+
+#slide-2 {
+  display: block;
+  max-width: 400px;
+  text-align: left;
+}
+
+.slide-3 {
+  background-image: url(../images/slide-3_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 800px;
+}
+
+.slide-3 .main__description,
+.slide-2 .main__description {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-top: 70px;
+}
+
+.slide-3__wrapper,
+.slide-2__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.slide-3 img {
+  height: calc(var(--size) * 0.36);
+  object-fit: cover;
+}
+
+#slide-3 {
+  display: block;
+  max-width: 400px;
+  text-align: left;
 }
 
 #open {
   width: 250px;
 }
 
-.image {
+/* -------- main vodeo ------ */
+/* .image {
   min-height: 1vh;
-}
+  overflow: hidden;
+} */
 
 .image img {
   width: 100%;
@@ -390,13 +542,29 @@ button:active {
   object-fit: cover;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  height: var(--size);
+  max-height: 100vh;
+  /* Указывает максимальную высоту, чтобы видео не выходило за пределы экрана */
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------------- */
 .instagram {
-  margin: 30px auto;
+  margin: 50px auto;
   max-width: 1330px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
 }
 
 .intagram__title {
@@ -407,8 +575,9 @@ button:active {
 }
 
 .intagram__title-text {
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 50px;
 }
 
@@ -454,31 +623,43 @@ button:active {
   height: 100%;
   border-radius: 16px;
   display: inline-block;
-  background: -moz-linear-gradient(top,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.1) 100%);
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   /* FF3.6+ */
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      color-stop(0%, rgba(0, 0, 0, 0.1)),
-      color-stop(100%, rgba(0, 0, 0, 0.5)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0.1)),
+    color-stop(100%, rgba(0, 0, 0, 0.5))
+  );
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   /* IE10+ */
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */
@@ -549,7 +730,7 @@ button:active {
 
 .info {
   background-color: var(--accent_light);
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
 }
 
 .info__inner {
@@ -589,8 +770,7 @@ button:active {
 .footer {
   background-color: var(--colorDark);
   color: #fff;
-  font-family: "SF UI Display Light", sans-serif;
-  font-weight: 100;
+  font-family: "Myriad Pro Regular", sans-serif;
   line-height: 150%;
   letter-spacing: 0.32px;
 }
@@ -599,14 +779,16 @@ button:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 190px;
 }
 
 .footer__content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 20px;
   margin: 50px 40px;
+  width: 50%;
 }
 
 .footer__content-title {
@@ -624,10 +806,14 @@ button:active {
   margin-top: 10px;
 }
 
+.footer__content-item a {
+  color: #fff;
+}
+
 .footer__social-buttons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 15px;
 }
 
@@ -635,7 +821,7 @@ button:active {
 
 .hr {
   margin-top: 130px;
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 20px;
 }
 
@@ -644,8 +830,13 @@ button:active {
   align-items: flex-start;
 }
 
+.catalogue-title {
+  font-family: "Myriad Pro Semibold", sans-serif;
+  font-weight: 600;
+}
+
 .menu {
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   display: flex;
   flex-direction: column;
   flex: 1 1 340px;
@@ -656,7 +847,7 @@ button:active {
 }
 
 .menu__title {
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   font-size: 20px;
 }
 
@@ -666,19 +857,24 @@ button:active {
   gap: 20px;
 }
 
+.menu__item li a {
+  display: flex;
+  width: 100%;
+}
+
 .catalogue {
   display: flex;
   flex-direction: column;
   flex: 1 1 1120px;
   padding: 15px;
-  font-family: "SF UI Display Light", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
 }
 
 .catalogue__header {
   display: flex;
   justify-content: space-between;
   margin-top: -16px;
-  height: 80px;
+  /* min-height: 80px; */
   gap: 20px;
 }
 
@@ -688,31 +884,40 @@ button:active {
   display: none;
 }
 
-.dropdown-toggle {
+.filter {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.dropdown-toggle,
+.filter-toggle {
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 260px;
+  width: 240px;
   cursor: pointer;
 }
 
-.dropdown-toggle.active {
+.dropdown-toggle.active,
+.filter-toggle.active {
   border-radius: 0px;
   border-bottom: none;
-  font-family: "SF UI Display Medium", sans-serif;
+  font-family: "Myriad Pro Regular", sans-serif;
   color: var(--dropDownMenuText);
 }
 
-.dropdown-toggle.active img {
+.dropdown-toggle.active img,
+.filter-toggle.active img {
   transform: rotate(180deg);
 }
 
-
 /* Скрыть выпадающее меню по умолчанию */
-.dropdown-menu {
+
+.dropdown-menu,
+.filter-menu {
   display: none;
   list-style: none;
   padding: 0;
@@ -722,15 +927,17 @@ button:active {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
-  width: 280px;
-
+  width: 260px;
+  z-index: 1;
 }
 
-.dropdown-menu a {
+.dropdown-menu a,
+.filter-menu a {
   color: var(--dropDownMenuText);
 }
 
-.dropdown-menu li {
+.dropdown-menu li,
+.filter-menu li {
   padding: 8px 12px;
   margin-top: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -754,6 +961,7 @@ button:active {
   padding: 20px;
   font-size: 16px;
   color: var(--colorDark);
+  font-family: "Myriad Pro Regular", sans-serif;
 }
 
 #search:focus {
@@ -801,9 +1009,9 @@ button:active {
   border-radius: 8px;
 }
 
-.catalogue__item-description {
+/* .catalogue__item-description {
   text-align: right;
-}
+} */
 
 .catalogue__button {
   min-width: 200px;
@@ -812,8 +1020,10 @@ button:active {
 .catalogue__added,
 .catalogue__added:hover,
 .catalogue__added:active {
-  background-image: linear-gradient(var(--colorButtonInactive),
-      var(--colorButtonInactive));
+  background-image: linear-gradient(
+    var(--colorButtonInactive),
+    var(--colorButtonInactive)
+  );
   cursor: auto;
 }
 
@@ -822,8 +1032,15 @@ button:active {
   justify-content: space-between;
 }
 
+.item-price {
+  font-family: "Myriad Pro Regular", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .payment {
-  font-family: "SF UI Display Light", sans-serif;
+  box-sizing: border-box;
+  font-family: "Myriad Pro Regular", sans-serif;
   display: flex;
   flex-direction: column;
   flex: 1 1 340px;
@@ -831,12 +1048,13 @@ button:active {
   border-radius: 15px;
   padding: 20px;
   gap: 10px;
+  max-width: 375px;
 }
 
 .payment__title {
-  font-family: "SF UI Display Medium", sans-serif;
   font-size: 20px;
   margin-top: 10px;
+  font-family: "Myriad Pro Semibold", sans-serif;
 }
 
 .cart {
@@ -852,4 +1070,143 @@ button:active {
 
 .cart li p {
   flex: 1 0 180px;
+  text-align: right;
+  margin-right: 15px;
+}
+
+.greetings {
+  background-color: var(--PaymentFormRadio);
+  margin: 20px 0;
+  max-width: 375px;
+  box-sizing: border-box;
+}
+
+.payment__details {
+  line-height: 150%;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.count {
+  font-size: 16px;
+}
+
+/* ---------------- Terms styling --------------------- */
+.terms {
+  display: flex;
+  margin-top: 40px;
+  font-family: "Myriad Pro Regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.terms__content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.terms__content p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.terms__content h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ------------------- Video player ---------------------  */
+.video__player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  /* opacity: 0.7; */
+}
+
+/* ------------------ Feedback styling ------------------ */
+.feedback {
+  border: 1px solid #00000010;
+  border-radius: 25px;
+  margin: 150px 0 50px 0;
+  padding: 50px 30px;
+}
+
+.feedback-title {
+  display: block;
+}
+
+.feedback-form__data {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  gap: 10px;
+  color: var(--colorDeep);
+}
+
+.feedback-form__data input[type="text"] {
+  font-size: 16px;
+  font-family: "Myriad Pro Regular", sans-serif;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+  color: var(--colorDeep);
+}
+
+.feedback-form__data input[type="text"]:focus {
+  outline: none;
+}
+
+.feedback-form__data input[type="text"]:focus::placeholder {
+  color: transparent;
+}
+
+.feedback-form__data textarea {
+  font-size: 16px;
+  font-family: "Myriad Pro Regular", sans-serif;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  min-height: 150px;
+  color: var(--colorDeep);
+}
+
+.feedback-form__data textarea:focus {
+  outline: none;
+}
+
+.feedback-form__data textarea:focus::placeholder {
+  color: transparent;
+}
+
+.feedback-form__data label {
+  font-size: 12px;
+  font-family: "Myriad Pro Regular", sans-serif;
+  margin-top: 10px;
+}
+
+/* ------------------- Video player ---------------------  */
+.video__player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  /* opacity: 0.7; */
 }
