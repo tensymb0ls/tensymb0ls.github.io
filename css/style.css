@@ -1081,8 +1081,8 @@ button:active,
 
 .cart li p {
   flex: 1 0 180px;
-  text-align: right;
   margin-right: 15px;
+  text-align: initial;
 }
 
 .greetings {

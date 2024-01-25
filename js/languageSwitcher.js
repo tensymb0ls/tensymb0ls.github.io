@@ -343,17 +343,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ----- RTL
 // список элементов, для которых будет переключаться направление текста
-const elements = [
-    ...document.querySelectorAll('.catalogue__item-description'),
-    ...document.querySelectorAll('.link-list'),
-    ...document.querySelectorAll('.menu__title'),
-    ...document.querySelectorAll('.payment__details'),
-    ...document.querySelectorAll('.payment__title'),
-    ...document.querySelectorAll('.payment__amount'),
-    // Добавь сюда другие элементы, если нужно расширить список
+let selectors = [
+    '.catalogue__item-description',
+    '.link-list',
+    '.menu__title',
+    '.payment__details',
+    '.payment__title',
+    '.payment__amount',
+    '.p_cartItem',
+    // Добавьте сюда другие селекторы, если нужно расширить список
 ];
 
+function updateElements() {
+    elements = [];
+    selectors.forEach(selector => {
+        elements.push(...document.querySelectorAll(selector));
+    });
+}
+
 function setRtlDir() {
+    updateElements();
     let selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
         selectedLanguage = 'he'; // Если язык не выбран, устанавливаем по умолчанию 'he'
@@ -372,6 +381,7 @@ function setRtlDir() {
 }
 
 function setLtrDir() {
+    updateElements();
     let selectedLanguage = localStorage.getItem('selectedLanguage');
     if (!selectedLanguage) {
         selectedLanguage = 'he'; // Если язык не выбран, устанавливаем по умолчанию 'he'

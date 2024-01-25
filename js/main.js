@@ -73,6 +73,7 @@ $(document).ready(function () {
     $(document).ready(function () {
         updatePaymentButton();
     });
+
     // Добавление товара в корзину
     $('.catalogue__button').on('click', function () {
         let addButton = $(this);
@@ -80,6 +81,10 @@ $(document).ready(function () {
             let description = addButton.siblings('.catalogue__item-description').text().trim();
             let priceText = addButton.siblings('.price').find('.item-price').text().trim();
             let price = parseFloat(priceText.replace(/[^\d.]/g, '')); // Извлечение числа из строки цены
+
+            // Получение значений атрибутов data-translate и dir из карточки товара
+            let dataTranslate = addButton.siblings('.catalogue__item-description').data('translate');
+            let dirAttribute = addButton.siblings('.catalogue__item-description').attr('dir');
 
             let existingItem = $('.cart li').filter(function () {
                 return $(this).find('p').text() === description;
@@ -90,7 +95,7 @@ $(document).ready(function () {
                 let count = parseInt(countSpan.text());
                 countSpan.text(count + 1);
             } else {
-                let newItem = '<li data-price="' + price + '"><p>' + description + '</p><div class="controls"><a href="#" class="increment" title="Добавить одну"><img src="images/controls_plus_icon.svg" alt="Добавить одну"></a><span class="count">1</span><a href="#" class="decrement" title="Убрать одну"><img src="images/controls_minus_icon.svg" alt="Убрать одну"></a><a href="#" class="del-item" title="Удалить из корзины"><img src="images/controls_edit_icon.svg" alt="Удалить из корзины"></a></div></li>';
+                let newItem = '<li data-price="' + price + '"><p class="p_cartItem" data-translate="' + dataTranslate + '" dir="' + dirAttribute + '">' + description + '</p><div class="controls"><a href="#" class="increment" title="Добавить одну"><img src="images/controls_plus_icon.svg" alt="Добавить одну"></a><span class="count">1</span><a href="#" class="decrement" title="Убрать одну"><img src="images/controls_minus_icon.svg" alt="Убрать одну"></a><a href="#" class="del-item" title="Удалить из корзины"><img src="images/controls_edit_icon.svg" alt="Удалить из корзины"></a></div></li>';
                 $('.cart').append(newItem);
             }
 
@@ -100,6 +105,7 @@ $(document).ready(function () {
             updatePaymentButton(); // Обновление состояния кнопки оплаты
         }
     });
+
 
     // Удаление товара из корзины
     $('.cart').on('click', '.del-item', function (event) {
