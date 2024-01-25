@@ -142,9 +142,7 @@
   .slide-2__wrapper {
     margin-top: 20px;
   }
-}
 
-@media (max-width: 767.98px) {
   .catalogue__header {
     flex-direction: column;
   }
@@ -168,6 +166,10 @@
   .slide-2__wrapper h1,
   .slide-3__wrapper h1 {
     font-size: 50px;
+  }
+  .feedback {
+    margin: 65px 0 50px 0;
+    padding: 20px 20px;
   }
 }
 

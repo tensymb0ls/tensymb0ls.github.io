@@ -1120,6 +1120,7 @@ button:active,
 
 .terms__content {
   max-width: 750px;
+  min-width: 50%;
   margin: 0 auto;
 }
 
@@ -1208,7 +1209,10 @@ button:active,
   font-family: "Myriad Pro Regular", sans-serif;
   margin-top: 10px;
 }
-
+.feedback-form__data .button {
+  max-width: 250px;
+  align-self: center;
+}
 /* ------------------- Video player ---------------------  */
 .video__player {
   position: absolute;
