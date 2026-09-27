@@ -27,12 +27,15 @@ $(document).ready(function () {
     });
 
     openPayment.click(function () {
+        document.body.classList.add('payment-open');
         payment.css("display", "flex").hide().fadeIn();
     });
 
 
     closePayment.click(function () {
-        payment.fadeOut();
+        payment.fadeOut(function () {
+            document.body.classList.remove('payment-open');
+        });
     });
 
     // Показать/скрыть выпадающее меню при клике на кнопку
@@ -72,6 +75,7 @@ $(document).ready(function () {
     // Проверка корзины при загрузке страницы и активация\деактивация кнопки оплаты
     $(document).ready(function () {
         updatePaymentButton();
+        updateCartBadge();
     });
 
     // Добавление товара в корзину
@@ -152,6 +156,15 @@ $(document).ready(function () {
             total += price * count;
         });
         $('.payment__amount').text(total.toFixed(2) + ' ₪'); // Округление суммы до двух знаков после запятой
+        updateCartBadge();
+    }
+
+    function updateCartBadge() {
+        let cartCount = 0;
+        $('.cart li .count').each(function () {
+            cartCount += parseInt($(this).text(), 10) || 0;
+        });
+        $('.cart-scroll-button__count').text(cartCount).prop('hidden', cartCount === 0);
     }
     // Передаем итоговую сумму в форму оплаты 
     $('#openPayment').on('click', function () {

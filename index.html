@@ -27,8 +27,7 @@
 <body>
   <span class="loader"><img src="./images/load.gif" alt="loading"></span>
   <div class="body">
-    <section class="bgimage">
-      <header class="header main-header">
+          <header class="header main-header">
         <div class="container">
           <div class="language__switcher">
             <span id="rus">
@@ -47,16 +46,17 @@
           </div>
         </div>
       </header>
+    <section class="bgimage">
 
       <main class="main">
         <!--------- modal window --------->
         <div class="modal" id="myModal">
           <h2 data-translate="modal-title">Добрый день, как Вы хотите получить свой заказ?</h2>
           <button class="modal__button-close" type="button" id="close">&times;</button>
-          <button class="modal__button"
+          <!-- <button class="modal__button"
             onclick="location.href=`https://wolt.com/he/isr/haifa/venue/ehrlich-boulangerie-patisserie`" type="button"
             data-translate="all">
-            Общее меню</button>
+            Общее меню</button> -->
           <button class="modal__button" onclick="location.href='catalogue.html'" type="button"
             data-translate="hospital">Больница</button>
           <button class="modal__button" onclick="location.href='catalogue.html'" type="button"
@@ -66,7 +66,8 @@
         <div class="single-slide">
 
           <div class="main__inner">
-            <div class="main__description">
+            <div class="slide-1">
+            <div class="main__description ">
               <h1 class="main__title">
                 <span data-translate="simply">Просто.</span><br>
                 <span data-translate="tasty">Вкусно.</span><br>
@@ -76,6 +77,7 @@
             <button type="button" class="open" data-translate="buy">
               заказать
             </button>
+            </div>
           </div>
           <div class="main__inner slide-2">
             <div class="main__description">
@@ -97,7 +99,7 @@
               <div class="slide-3__wrapper">
                 <h1 class="main__title">
                   <span data-translate="slide-3" id="slide-3">
-                    Разнообразие вкусных и свежих бутербродов
+                    Разнообразие вкусных и свежих сэндвичей
                   </span>
                 </h1>
                 <button type="button" class="open" data-translate="buy">
@@ -115,8 +117,8 @@
         </video>
       </div> -->
       </main>
-
-      <section class="instagram">
+    </section>
+          <section class="instagram">
         <div class="container">
           <div class="intagram__title">
             <div class="intagram__title-decoration"></div>
@@ -133,7 +135,9 @@
                   </span>
                   <div class="instagram__card-expand">...</div>
                 </div>
+                <a href="https://www.instagram.com/tasty_choice_haifa/">
                 <img src="images/card_1.jpg" alt="Instagram image">
+                </a>
               </div>
               <div class="instagram__card-buttons">
                 <img src="images/instagram_like_icon.svg" alt="Like">
@@ -153,7 +157,9 @@
                   </span>
                   <div class="instagram__card-expand">...</div>
                 </div>
-                <img src="images/card_2.jpg" alt="Instagram image">
+                <a href="https://www.instagram.com/tasty_choice_haifa/">
+                  <img src="images/card_2.jpg" alt="Instagram image">
+                </a>
               </div>
               <div class="instagram__card-buttons">
                 <img src="images/instagram_like_icon.svg" alt="Like">
@@ -173,7 +179,9 @@
                   </span>
                   <div class="instagram__card-expand">...</div>
                 </div>
-                <img src="images/card_3.jpg" alt="Instagram image">
+                <a href="https://www.instagram.com/tasty_choice_haifa/">
+                  <img src="images/card_3.jpg" alt="Instagram image">
+                </a>
               </div>
               <div class="instagram__card-buttons">
                 <img src="images/instagram_like_icon.svg" alt="Like">
@@ -193,7 +201,9 @@
                   </span>
                   <div class="instagram__card-expand">...</div>
                 </div>
-                <img src="images/card_4.jpg" alt="Instagram image">
+                <a href="https://www.instagram.com/tasty_choice_haifa/">
+                  <img src="images/card_4.jpg" alt="Instagram image">
+                </a>
               </div>
               <div class="instagram__card-buttons">
                 <img src="images/instagram_like_icon.svg" alt="Like">
@@ -213,7 +223,9 @@
                   </span>
                   <div class="instagram__card-expand">...</div>
                 </div>
-                <img src="images/card_5.jpg" alt="Instagram image">
+                <a href="https://www.instagram.com/tasty_choice_haifa/">
+                  <img src="images/card_5.jpg" alt="Instagram image">
+                </a>
               </div>
               <div class="instagram__card-buttons">
                 <img src="images/instagram_like_icon.svg" alt="Like">
@@ -227,7 +239,6 @@
           </div>
         </div>
       </section>
-    </section>
     <section class="image">
       <div class="video-container">
         <video muted autoplay loop playsinline>

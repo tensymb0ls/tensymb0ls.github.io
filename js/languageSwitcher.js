@@ -347,10 +347,13 @@ let selectors = [
     '.catalogue__item-description',
     '.link-list',
     '.menu__title',
+    '.dropdown-menu',
+    '.dropdown-toggle',
     '.payment__details',
     '.payment__title',
     '.payment__amount',
     '.p_cartItem',
+    
     // Добавьте сюда другие селекторы, если нужно расширить список
 ];
 
